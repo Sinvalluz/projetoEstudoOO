@@ -1,8 +1,7 @@
 package roteiro1.parte2;
 
 public class Programa02 {
-    public static void calcularSalario (double salarioBase, int horasExtras) {
-        int horasTrabalhadas = 160;
+    public static void calcularSalario (double salarioBase, int horasExtras, int horasTrabalhadas) {
         double valorPorHora = salarioBase / horasTrabalhadas;
         double salarioTotal = salarioBase + (valorPorHora * horasExtras);
 
