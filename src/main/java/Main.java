@@ -1,7 +1,7 @@
-import roteiro2.parte4.Programa10;
+import roteiro3.parte2.Programa14;
 
 public class Main {
     public static void main(String[] args) {
-        Programa10.numeroSecreto();
+        Programa14.operacoesBasicas();
     }
 }
