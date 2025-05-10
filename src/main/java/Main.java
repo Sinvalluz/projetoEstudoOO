@@ -1,22 +1,16 @@
-import roteiro5.parte3.Loja;
+import roteiro6.parte3.Ligacao;
+import roteiro6.parte3.Tempo;
 
 public class Main {
     public static void main(String[] args) {
-        Loja loja1 = new Loja("SinvassTech", "Sinval empreendimentos e tecnologias", "91146368000118");
-        Loja loja2 = new Loja("Mercadão do povo", "50980160000112");
-//        Loja loja3 = new Loja("Lojão da Cidade", "Lojão Comércio LTDA", "11223344");
+        Tempo inicio = new Tempo(10, 0, 0);
+        Tempo fim = new Tempo(10, 5, 35);
 
-        loja1.setValorFat(10000);
-        loja2.setValorFat(20000);
-//        loja3.setValorFat(10000);
+        Ligacao ligacao = new Ligacao("71996186907", "71996186907", "Bahia", "Rio de Janeiro", inicio);
+        ligacao.setHoraFim(fim);
 
-        System.out.println(" ****** Comparação com método estático ********");
-        Loja maiorLojaFatStatic = Loja.compararFat_static(loja1, loja2);
-        System.out.println("Loja com maior faturamento (estático): " + maiorLojaFatStatic.getNomeFantasia());
-
-        System.out.println(" ****** Comparação com método NÃO estático ********");
-        Loja maiorLojaFatNaoStatic = loja1.compararFat_naoStatic(loja2);
-        System.out.println("Loja com maior faturamento (não estático): " + maiorLojaFatNaoStatic.getNomeFantasia());
+        System.out.println("Valor exato da ligação: R$" + ligacao.calcularValorLigacao());
+        System.out.println("Valor arredondado da ligação: R$" + ligacao.calcularValorLigacaoArredondado());
 
     }
 }
