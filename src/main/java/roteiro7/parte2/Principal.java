@@ -1,9 +1,9 @@
-import roteiro7.parte3.Aluno;
+package roteiro7.parte2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class Principal {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -31,29 +31,9 @@ public class Main {
             int anoIngresso = input.nextInt();
 
             listaAlunos.add(new Aluno(matricula, nome, curso, anoIngresso));
-
-
             aluno++;
         }
 
-        System.out.println("Quantas disciplinas você quer adicionar? ");
-        int qtdDeDisciplinas = input.nextInt();
-
-        input.nextLine();
-
-        for (Aluno listaAluno : listaAlunos) {
-            System.out.println("Adicione as disciplinas para " + listaAluno.getNome() + ".\n");
-            for (int i = 0; i < qtdDeDisciplinas; i++) {
-                System.out.print("Digite o nome de uma disciplina: ");
-                String disciplina = input.nextLine();
-                listaAluno.adicionarDisciplina(disciplina);
-            }
-        }
-
-
-
-
-        input.close();
         System.out.println("\nListando os Alunos: ");
         System.out.println("******************************************");
         for (Aluno listaAluno : listaAlunos) {
@@ -61,8 +41,6 @@ public class Main {
             System.out.println("Nome: " + listaAluno.getNome());
             System.out.println("Curso: " + listaAluno.getCurso());
             System.out.println("Ano Ingresso: " + listaAluno.getAnoIngresso());
-            System.out.println("Quantidade de disciplinas: " + listaAluno.getQtdeDisciplina());
-            System.out.println("Disciplinas: " + listaAluno.mostrasDisciplinas());
             System.out.println("******************************************");
         }
     }
